@@ -11,7 +11,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom right, #a8edea, #fed6e3);
+            background: linear-gradient(to bottom right, #fce4ec, #e3f2fd); /* Pastel gradient */
             color: #333;
         }
 
@@ -21,15 +21,16 @@
             margin: 20px auto;
             padding: 20px;
             background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border: 4px solid #ffd1dc; /* Pastel pink border */
         }
 
         /* Chart Styling */
         iframe {
             width: 100%;
             height: 500px;
-            border: 4px solid #00a8cc;
+            border: 4px solid #b3e5fc; /* Pastel blue border */
             border-radius: 12px;
             margin: 20px 0;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
@@ -38,18 +39,18 @@
         /* Headers Styling */
         h1, h2 {
             text-align: center;
-            color: #444;
+            font-weight: bold; /* Bold text */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
-            font-size: 2.5em;
-            color: #ff6f61;
+            font-size: 2.8em;
+            color: #ff6f61; /* Coral pastel */
         }
 
         h2 {
-            font-size: 2em;
-            color: #007bff;
+            font-size: 2.2em;
+            color: #64b5f6; /* Light pastel blue */
         }
 
         /* Description Styling */
@@ -58,19 +59,21 @@
             margin-bottom: 20px;
             color: #555;
             font-style: italic;
-            background: rgba(255, 255, 255, 0.8);
-            border-left: 4px solid #007bff;
-            padding: 10px;
-            border-radius: 8px;
+            font-weight: bold; /* Bold text */
+            background: rgba(255, 245, 238, 0.8); /* Soft pastel peach */
+            border-left: 8px solid #ffab91; /* Peach border */
+            padding: 15px;
+            border-radius: 12px;
         }
 
         /* Chart Section Styling */
         .chart-section {
             margin-bottom: 40px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 8px;
+            background: rgba(240, 245, 255, 0.8); /* Soft pastel blue */
+            border-radius: 12px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #bbdefb; /* Light blue pastel border */
         }
 
         .chart-section:hover {
@@ -91,13 +94,13 @@
 
         <div class="chart-section">
             <h2>80-100 Years Old</h2>
-            <p class="description">This PlotDB chart shows the distribution of Tainan's upper age from 80-100 years old. This chart serves as a concise overview of the 80-100 years old population in each district.</p>
+            <p class="description">This PlotDB chart shows the distribution of Tainan's upper age from 80-100 years old. This chart serves as a concise overview of the 80-100 years old population.</p>
             <iframe src="https://plotdb.io/v/chart/37484" title="80-100 Age Group Chart"></iframe>
         </div>
 
         <div class="chart-section">
             <h2>65-100 Years Old</h2>
-            <p class="description">This PlotDB chart shows the distribution of Tainan's upper age from 65-100 years old. This chart serves as a concise overview of the 65-100 years old population in each district.</p>
+            <p class="description">This PlotDB chart shows the distribution of Tainan's upper age from 65-100 years old. This chart serves as a concise overview of the 65-100 years old population.</p>
             <iframe src="https://plotdb.io/v/chart/37488" title="65-100 Age Group Chart"></iframe>
         </div>
     </div>
