@@ -1,93 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Visualization</title>
-    <style>
-        /* General Styling */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom right, #f8bbd0, #e1bee7); /* Soft pastel gradient */
-            color: #333;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Age Group & Community Visualization</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #fce4ec, #e3f2fd);
+      color: #333;
+    }
 
-        /* Container Styling */
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            border: 4px solid #ffd1dc; /* Pastel pink border */
-        }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border: 4px solid #ffd1dc;
+    }
 
-        /* Description Styling */
-        .description {
-            padding: 20px;
-            font-size: 1.2em;
-            line-height: 1.6;
-            background: rgba(255, 245, 238, 0.8); /* Soft pastel peach */
-            border-left: 8px solid #ffab91; /* Peach border */
-            border-radius: 12px;
-            font-weight: bold; /* Bold text */
-            color: #555;
-        }
+    h1, h2 {
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-        /* Image Section Styling */
-        .image-section {
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
+    h1 {
+      font-size: 2.8em;
+      color: #ff6f61;
+    }
 
-        .image-section img {
-            width: 80%;
-            max-width: 600px;
-            border-radius: 12px;
-            margin: 20px 0;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            border: 4px solid #b3e5fc; /* Light pastel blue border */
-        }
+    h2 {
+      font-size: 2.2em;
+      color: #64b5f6;
+    }
 
-        /* Headers Styling */
-        h1 {
-            text-align: center;
-            font-size: 2.8em;
-            color: #ff6f61; /* Coral pastel */
-            font-weight: bold;
-        }
-    </style>
+    .description {
+      padding: 20px;
+      font-size: 1.2em;
+      line-height: 1.6;
+      background: rgba(255, 245, 238, 0.8);
+      border-left: 8px solid #ffab91;
+      border-radius: 12px;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .image-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .image-section img {
+      width: 80%;
+      max-width: 600px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border: 4px solid #b3e5fc;
+    }
+
+    .chart-section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background: rgba(240, 245, 255, 0.8);
+      border-radius: 12px;
+      border: 2px solid #bbdefb;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .chart-section:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: 4px solid #b3e5fc;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Community Visualization</h1>
-        <div class="description">
-            <p>
-                In the upper section, we see a serene, thoughtfully designed community—a visual representation of demographic data in action. 
-                The environment supports individuals aged 65 to 100 with accessible infrastructure, medical support, green spaces, and social gathering areas. 
-                This reflects the growing importance of urban planning based on aging population statistics, where data drives the development of elderly-friendly 
-                transport systems, wellness programs, and communal living spaces.
-            </p>
-            <p>
-                In contrast, the lower section brings that data to life through cultural experience. 
-            </p>
-            <p>
-                Through this picture, I used Gamma AI to generate my ideas of how Elderly individuals are no longer isolated by actively participating in shared 
-                traditions, meals, and vibrant conversations in beautifully preserved cultural districts. This dynamic setting shows how elderhood is not only 
-                about care, but also about community, heritage, and engagement. Together, these scenes portray a full-circle view: from policy and planning to 
-                lived human experience, rooted in dignity, connection, and identity. Hopefully, eldery's can have this support in the future.
-            </p>
-        </div>
-        <div class="image-section">
-            <img src="img1.jpeg" alt="Upper Section Image">
-            <img src="img2.jpeg" alt="Lower Section Image">
-        </div>
+  <div class="container">
+    <h1>Age Group & Community Visualization</h1>
+
+    <h2>Age Group Distribution in Tainan</h2>
+    <div class="chart-section">
+      <h2>65–80 Years Old</h2>
+      <iframe src="https://plotdb.io/v/chart/37481" title="65-80 Age Group Chart"></iframe>
     </div>
+
+    <div class="chart-section">
+      <h2>80–100 Years Old</h2>
+      <div class="description">This PlotDB chart presents the distribution of Tainan’s elderly population aged 80–100, offering insight into the oldest demographic group.</div>
+      <iframe src="https://plotdb.io/v/chart/37484" title="80-100 Age Group Chart"></iframe>
+    </div>
+
+    <div class="chart-section">
+      <h2>65–100 Years Old</h2>
+      <div class="description">This chart provides a combined view of the entire elderly population in Tainan, from 65 to 100 years old, summarizing age trends across the full spectrum.</div>
+      <iframe src="https://plotdb.io/v/chart/37488" title="65-100 Age Group Chart"></iframe>
+    </div>
+
+    <div class="description">
+      <p>
+        In the upper image, we see a serene, purposefully designed community—an illustration of demographic data in action. 
+        This environment supports individuals aged 65 to 100 through accessible infrastructure, healthcare, greenery, and communal spaces. 
+        It's a vision shaped by the realities of aging population data and the push for elderly-friendly urban development.
+      </p>
+      <p>
+        In contrast, the lower image brings that data to life through vibrant cultural participation. Using Gamma AI, I envisioned 
+        elderly individuals actively engaging in shared meals, traditional settings, and meaningful interactions. This highlights how elderhood is 
+        not just about care—but also community, culture, and lifelong contribution.
+      </p>
+      <p>
+        These visualizations aim to advocate for a future where aging is embraced with dignity, identity, and support.
+      </p>
+    </div>
+
+    <div class="image-section">
+      <img src="img1.jpeg" alt="Elderly Community Visualization (Upper)">
+      <img src="img2.jpeg" alt="Cultural Engagement (Lower)">
+    </div>
+  </div>
 </body>
 </html>
