@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Age Group & Community Visualization</title>
+  <title>年齡層與社區視覺化</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom right, #fce4ec, #e3f2fd);
+      background: linear-gradient(to bottom right, #fff0f5, #e0f7fa);
       color: #333;
     }
 
@@ -20,7 +20,7 @@
       background: #ffffff;
       border-radius: 16px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      border: 4px solid #ffd1dc;
+      border: 4px solid #f8bbd0;
     }
 
     h1, h2 {
@@ -31,48 +31,30 @@
 
     h1 {
       font-size: 2.8em;
-      color: #ff6f61;
+      color: #ec407a;
     }
 
     h2 {
-      font-size: 2.2em;
-      color: #64b5f6;
+      font-size: 2em;
+      color: #42a5f5;
     }
 
     .description {
       padding: 20px;
-      font-size: 1.2em;
-      line-height: 1.6;
-      background: rgba(255, 245, 238, 0.8);
-      border-left: 8px solid #ffab91;
+      font-size: 1.1em;
+      line-height: 1.8;
+      background: rgba(255, 245, 238, 0.9);
+      border-left: 8px solid #f48fb1;
       border-radius: 12px;
-      font-weight: bold;
       color: #555;
       margin-bottom: 30px;
-    }
-
-    .image-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 40px;
-    }
-
-    .image-section img {
-      width: 80%;
-      max-width: 600px;
-      margin: 20px 0;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      border: 4px solid #b3e5fc;
+      font-weight: bold;
     }
 
     .chart-section {
       margin-bottom: 40px;
       padding: 20px;
-      background: rgba(240, 245, 255, 0.8);
       border-radius: 12px;
-      border: 2px solid #bbdefb;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -81,56 +63,80 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
+    .chart1 { background: rgba(255, 228, 225, 0.7); border: 2px solid #f8bbd0; }
+    .chart2 { background: rgba(225, 245, 254, 0.7); border: 2px solid #90caf9; }
+    .chart3 { background: rgba(232, 245, 233, 0.7); border: 2px solid #a5d6a7; }
+
     iframe {
       width: 100%;
       height: 500px;
-      border: 4px solid #b3e5fc;
       border-radius: 12px;
+      border: 4px solid #b3e5fc;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 10px;
+      scroll-behavior: smooth;
+    }
+
+    .carousel img {
+      flex-shrink: 0;
+      scroll-snap-align: center;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 12px;
+      border: 4px solid #ce93d8;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Age Group & Community Visualization</h1>
+    <h1>年齡層與社區視覺化</h1>
 
-    <h2>Age Group Distribution in Tainan</h2>
-    <div class="chart-section">
-      <h2>65–80 Years Old</h2>
-      <iframe src="https://plotdb.io/v/chart/37481" title="65-80 Age Group Chart"></iframe>
+    <h2>臺南高齡者人口分布</h2>
+
+    <div class="chart-section chart1">
+      <h2>65–80 歲人口分布</h2>
+      <iframe src="https://plotdb.io/v/chart/37481" title="65-80 歲圖表"></iframe>
     </div>
 
-    <div class="chart-section">
-      <h2>80–100 Years Old</h2>
-      <div class="description">This PlotDB chart presents the distribution of Tainan’s elderly population aged 80–100, offering insight into the oldest demographic group.</div>
-      <iframe src="https://plotdb.io/v/chart/37484" title="80-100 Age Group Chart"></iframe>
+    <div class="chart-section chart2">
+      <h2>80–100 歲人口分布</h2>
+      <div class="description">此圖表展示臺南年齡介於 80 至 100 歲的高齡者人口分布情形，呈現最高齡群體的輪廓。</div>
+      <iframe src="https://plotdb.io/v/chart/37484" title="80-100 歲圖表"></iframe>
     </div>
 
-    <div class="chart-section">
-      <h2>65–100 Years Old</h2>
-      <div class="description">This chart provides a combined view of the entire elderly population in Tainan, from 65 to 100 years old, summarizing age trends across the full spectrum.</div>
-      <iframe src="https://plotdb.io/v/chart/37488" title="65-100 Age Group Chart"></iframe>
+    <div class="chart-section chart3">
+      <h2>65–100 歲總覽</h2>
+      <div class="description">此圖整合了臺南 65 至 100 歲高齡者人口數據，描繪整體老年族群趨勢與變化。</div>
+      <iframe src="https://plotdb.io/v/chart/37488" title="65-100 歲圖表"></iframe>
     </div>
 
     <div class="description">
       <p>
-        In the upper image, we see a serene, purposefully designed community—an illustration of demographic data in action. 
-        This environment supports individuals aged 65 to 100 through accessible infrastructure, healthcare, greenery, and communal spaces. 
-        It's a vision shaped by the realities of aging population data and the push for elderly-friendly urban development.
+        在以下兩張圖片中，我們可以看到一個根據高齡者人口資料所構想出的未來生活情境與文化場域。上圖呈現的是一個設計完善、溫馨且功能齊全的高齡友善社區，整體環境結合無障礙動線、綠意空間、醫療與長照設施，致力於讓高齡者在熟悉的社區中，維持自主、有尊嚴的生活方式。這樣的社區設計，是面對人口高齡化挑戰時，都市規劃不可或缺的一環。
       </p>
       <p>
-        In contrast, the lower image brings that data to life through vibrant cultural participation. Using Gamma AI, I envisioned 
-        elderly individuals actively engaging in shared meals, traditional settings, and meaningful interactions. This highlights how elderhood is 
-        not just about care—but also community, culture, and lifelong contribution.
+        而在下圖中，我們透過 Gamma AI 的創意模擬，描繪出高齡者積極參與文化與社交活動的動人場景。圖中可見長者與鄰里共享餐食、參與傳統節慶與多代同堂互動，呈現出高齡生活的多元面貌。這不僅打破了對老年生活「安靜退場」的刻板印象，更展現出高齡者在社會中持續貢獻與參與的重要性。
       </p>
       <p>
-        These visualizations aim to advocate for a future where aging is embraced with dignity, identity, and support.
+        透過本視覺化專案，我們希望喚起大眾對高齡者需求與潛能的關注，並強調建立一個具包容性與文化認同的高齡友善社會。這不只是政策或建設的挑戰，更是價值觀與世代共融的具體實踐。高齡不是終點，而是人生另一個充滿可能與連結的階段。
       </p>
     </div>
 
-    <div class="image-section">
-      <img src="img1.jpeg" alt="Elderly Community Visualization (Upper)">
-      <img src="img2.jpeg" alt="Cultural Engagement (Lower)">
+    <div class="carousel">
+      <img src="img1.jpeg" alt="高齡友善社區意象圖（上）">
+      <img src="img2.jpeg" alt="文化參與與代間互動圖（下）">
     </div>
   </div>
 </body>
