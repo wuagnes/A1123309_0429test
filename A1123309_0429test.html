@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>年齡層與社區視覺化</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -75,18 +79,18 @@
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
     }
 
-    .carousel {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 20px;
-      padding: 10px;
-      scroll-behavior: smooth;
+    /* Swiper customization */
+    .swiper {
+      width: 100%;
+      padding: 20px 0;
     }
 
-    .carousel img {
-      flex-shrink: 0;
-      scroll-snap-align: center;
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+    }
+
+    .swiper-slide img {
       width: 80%;
       max-width: 600px;
       border-radius: 12px;
@@ -94,8 +98,13 @@
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
-    .carousel::-webkit-scrollbar {
-      display: none;
+    .swiper-pagination-bullet-active {
+      background-color: #ec407a;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #ec407a;
     }
   </style>
 </head>
@@ -103,21 +112,21 @@
   <div class="container">
     <h1>年齡層與社區視覺化</h1>
 
-    <h2>臺南高齡者人口分布</h2>
+    <h2>臺南高齡者人口數</h2>
 
     <div class="chart-section chart1">
-      <h2>65–80 歲人口分布</h2>
+      <h2>65–80 歲高齡者人口數</h2>
       <iframe src="https://plotdb.io/v/chart/37481" title="65-80 歲圖表"></iframe>
     </div>
 
     <div class="chart-section chart2">
-      <h2>80–100 歲人口分布</h2>
+      <h2>80–100 歲高齡者人口數</h2>
       <div class="description">此圖表展示臺南年齡介於 80 至 100 歲的高齡者人口分布情形，呈現最高齡群體的輪廓。</div>
       <iframe src="https://plotdb.io/v/chart/37484" title="80-100 歲圖表"></iframe>
     </div>
 
     <div class="chart-section chart3">
-      <h2>65–100 歲總覽</h2>
+      <h2>總共 65–100 高齡者人口數</h2>
       <div class="description">此圖整合了臺南 65 至 100 歲高齡者人口數據，描繪整體老年族群趨勢與變化。</div>
       <iframe src="https://plotdb.io/v/chart/37488" title="65-100 歲圖表"></iframe>
     </div>
@@ -130,14 +139,38 @@
         而在下圖中，我們透過 Gamma AI 的創意模擬，描繪出高齡者積極參與文化與社交活動的動人場景。圖中可見長者與鄰里共享餐食、參與傳統節慶與多代同堂互動，呈現出高齡生活的多元面貌。這不僅打破了對老年生活「安靜退場」的刻板印象，更展現出高齡者在社會中持續貢獻與參與的重要性。
       </p>
       <p>
-        透過本視覺化專案，我們希望喚起大眾對高齡者需求與潛能的關注，並強調建立一個具包容性與文化認同的高齡友善社會。這不只是政策或建設的挑戰，更是價值觀與世代共融的具體實踐。高齡不是終點，而是人生另一個充滿可能與連結的階段。
+        透過本視覺化專案，我希望喚起大眾對高齡者需求與潛能的關注，並強調建立一個具包容性與文化認同的高齡友善社會。這不只是政策或建設的挑戰，更是價值觀與世代共融的具體實踐。高齡不是終點，而是人生另一個充滿可能與連結的階段。
       </p>
     </div>
 
-    <div class="carousel">
-      <img src="img1.jpeg" alt="高齡友善社區意象圖（上）">
-      <img src="img2.jpeg" alt="文化參與與代間互動圖（下）">
+    <!-- Swiper Carousel -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img1.jpeg" alt="高齡友善社區意象圖（上）"></div>
+        <div class="swiper-slide"><img src="img2.jpeg" alt="文化參與與代間互動圖（下）"></div>
+      </div>
+      <!-- Optional navigation & pagination -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      spaceBetween: 20
+    });
+  </script>
 </body>
 </html>
